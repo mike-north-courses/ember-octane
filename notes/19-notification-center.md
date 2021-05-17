@@ -64,7 +64,7 @@ export default class NotificationsService extends Service {
   messages = [];
 
   @action
-  notify(body, color = 'indigo-darker') {
+  notify(body, color = 'indigo-600') {
     const id = getId();
     const newNotification = {
       id,

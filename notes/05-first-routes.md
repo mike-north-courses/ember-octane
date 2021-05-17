@@ -89,19 +89,19 @@ Paste the HTML below into [`app/templates/login.hbs`](../app/templates/login.hbs
   </div>
   <div class="flex justify-center flex-row w-full">
     <div class="w-full max-w-xs">
-      <form class="bg-grey-light shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <form class="bg-gray-300 shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div class="inline-block relative w-64 mt-2">
           <label class="sr-only">Select a user</label>
           <select
             id="select-user"
-            class="block appearance-none w-full bg-white border border-grey-light hover:border-grey px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+            class="block appearance-none w-full bg-white border border-gray-300 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
           >
             <option value="" disabled>Select a user</option>
             <option value="1">Testy Testerson</option>
             <option value="2">Sample McData</option>
           </select>
           <div
-            class="pointer-events-none absolute pin-y pin-r flex items-center px-2 text-grey-darker"
+            class="pointer-events-none absolute pin-y pin-r flex items-center px-2 text-gray-600"
           >
             <svg
               class="fill-current h-4 w-4"
@@ -119,7 +119,7 @@ Paste the HTML below into [`app/templates/login.hbs`](../app/templates/login.hbs
         </p>
         <div class="flex items-center justify-between">
           <input
-            class="bg-grey text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            class="bg-gray-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             value="Sign In"
             type="submit"
           />
@@ -153,9 +153,9 @@ First, open up [`app/templates/components/team-sidebar.hbs`](../app/templates/co
    </nav>
 
    <footer class="mx-4 mb-2 text-white">
--    <button class="text-white rounded bg-grey-darker hover:bg-red-darker p-2 team-sidebar__logout-button">
+-    <button class="text-white rounded bg-gray-600 hover:bg-red-700 p-2 team-sidebar__logout-button">
 +    <LinkTo @route='login' {{! destination route }}
-+            class="text-white rounded bg-grey-darker no-underline hover:bg-red-darker p-2 team-sidebar__logout-button"
++            class="text-white rounded bg-gray-600 no-underline hover:bg-red-700 p-2 team-sidebar__logout-button"
 +    >
        Logout
 -    </button>

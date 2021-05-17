@@ -61,7 +61,7 @@ Finally, let's go into the component, and hook the action up to the existing but
 ```diff
 - <button
 + <button {{on "click" @onDelete}}
-  class="message__delete-button border-transparent hover:border-red-light show-on-hover hover:bg-red-lightest border-1 rounded mb-1 pl-3 pr-2 py-1"
+  class="message__delete-button border-transparent hover:border-red-300 show-on-hover hover:bg-red-100 border-1 rounded mb-1 pl-3 pr-2 py-1"
 ```
 
 You should now be able to hover over each message to see a "delete" button, and clicking on one of these should result in the `DELETE` api call being made, and the message being removed from the screen (and your `db.json` database).

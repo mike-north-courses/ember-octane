@@ -44,7 +44,7 @@ Remember the `StubbedAuthService` that we just added? It needs to have the same 
     this.currentUserId = null;
     this.router.transitionTo('login');
   }
-``` 
+```
 
 We also need to import `action` at the top of the file:
 
@@ -127,8 +127,8 @@ In `app/templates/components/team-sidebar.hbs`, replace the `LinkTo` component w
 ```diff
 -    <LinkTo @route='login' {{! destination route }}
 -            @tagName="button" {{! use <button> instead of <a> }}
--            class="text-white rounded bg-grey-darker hover:bg-red-darker p-2 team-sidebar__logout-button" {{! HTML classes}}
-+    <button {{on "click" this.auth.logout}} class="text-white rounded bg-grey-darker hover:bg-red-darker p-2 team-sidebar__logout-button"
+-            class="text-white rounded bg-gray-600 hover:bg-red-700 p-2 team-sidebar__logout-button" {{! HTML classes}}
++    <button {{on "click" this.auth.logout}} class="text-white rounded bg-gray-600 hover:bg-red-700 p-2 team-sidebar__logout-button"
 +    >
       Logout
 -    </LinkTo>

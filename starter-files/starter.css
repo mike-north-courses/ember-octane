@@ -1,4 +1,7 @@
-@import 'tailwind.css';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 
 .hover-target .show-on-hover {
   opacity: 0;
@@ -9,15 +12,4 @@
 .hover-target .show-on-hover:active {
   opacity: 1;
   filter: alpha(opacity=1);
-}
-
-.sr-only {
-  clip-path: inset(50%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
 }

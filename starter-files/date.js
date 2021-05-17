@@ -37,26 +37,13 @@ function padLeadingZeroes(val, digits) {
  * @returns {string}
  */
 export function dateToString(date) {
-  if (
-    !(
-      typeof date === 'string' ||
-      typeof date === 'number' ||
-      date instanceof Date
-    )
-  )
-    return null;
+  if (!(typeof date === 'string' || typeof date === 'number' || date instanceof Date)) return null;
   const d = new Date(date);
   const ampm = d.getHours() >= 12 ? 'PM' : 'AM';
-  const hrsConverted =
-    d.getHours() > 12 ? Math.abs(12 - d.getHours()) : d.getHours();
+  const hrsConverted = d.getHours() > 12 ? Math.abs(12 - d.getHours()) : d.getHours();
 
-  return `${
-    MONTH_NAMES[d.getMonth()]
-  } ${d.getDate()}, ${d.getFullYear()} ${padLeadingZeroes(
+  return `${MONTH_NAMES[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()} ${padLeadingZeroes(
     hrsConverted,
     2
-  )}:${padLeadingZeroes(d.getMinutes(), 2)}.${padLeadingZeroes(
-    d.getSeconds(),
-    2
-  )} ${ampm}`;
+  )}:${padLeadingZeroes(d.getMinutes(), 2)}.${padLeadingZeroes(d.getSeconds(), 2)} ${ampm}`;
 }

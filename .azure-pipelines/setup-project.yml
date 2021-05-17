@@ -1,5 +1,5 @@
 parameters:
-  nodeVersion: '8.x'
+  nodeVersion: '14.x'
   globalDependencies: ''
   installCommand: yarn install --non-interactive
 

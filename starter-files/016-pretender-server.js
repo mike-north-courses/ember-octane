@@ -4,7 +4,7 @@
  * @returns {ResponseHandler}
  */
 function jsonResponse(body) {
-  return function() {
+  return function () {
     return [200, {}, JSON.stringify(body)];
   };
 }
@@ -12,7 +12,7 @@ function jsonResponse(body) {
 /**
  * @this {Pretender}
  */
-function setupServer() {
+function setupServer() { // eslint-disable-line
   this.get(
     '/api/teams/gh/channels/prs',
     jsonResponse({

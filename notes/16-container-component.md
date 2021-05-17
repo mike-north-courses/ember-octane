@@ -12,7 +12,7 @@ The pattern of container and presentational components was made popular by [this
       <img src="https://github.com/mike-north.png" height=64 align="left" style="margin-right: 10px" />
     </a>
     <p>
-      The "container and presentational components" pattern can result in significantly more testable, more easy to understand, and more composable code. Most of this is due to the benefits of separating state and state-manipulating logic from the component's other concerns (i.e., rendering HTML). Often the sweet spot for components will be "90% container" or "90% presentational", and aiming for 100% can result in significant additional unneeded complexity. 
+      The "container and presentational components" pattern can result in significantly more testable, more easy to understand, and more composable code. Most of this is due to the benefits of separating state and state-manipulating logic from the component's other concerns (i.e., rendering HTML). Often the sweet spot for components will be "90% container" or "90% presentational", and aiming for 100% can result in significant additional unneeded complexity.
     </p>
   </blockquote>
 </p>
@@ -122,7 +122,7 @@ Messages should now load with the app, but they're visually identical regardless
 
 ```diff
  <!-- Message -->
-<div class="flex items-start px-6 py-2 text-sm hover-target hover:bg-grey-lightest message" role="listitem">
+<div class="flex items-start px-6 py-2 text-sm hover-target hover:bg-gray-50 message" role="listitem">
   <figure class="w-10 h-10 rounded overflow-hidden mr-3">
 -    <img class="message__user-avatar" src="https://gravatar.com/avatar/96c332a96737c6668906232e39cb16ef?s=200" alt="">
 +    <img class="message__user-avatar" src={{@message.user.iconUrl}} alt="">
@@ -135,7 +135,7 @@ Messages should now load with the app, but they're visually identical regardless
 +       {{@message.user.name}}
       </a>
       <span class="sr-only">at</span>
-      <time class="message__timestamp text-grey-darker text-xs font-normal">
+      <time class="message__timestamp text-gray-500 text-xs font-normal">
 -       {{format-timestamp '04-21-2019 12:21.38 PM'}}
 +       {{format-timestamp @message.createdAt}}
       </time>

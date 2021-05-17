@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'shlack',
     environment,
@@ -29,7 +29,7 @@ module.exports = function(environment) {
 
     // A11y testing config
     ['ember-a11y-testing']: {
-        componentOptions: {
+      componentOptions: {
         // Disable visual audit feature
         turnAuditOff: true,
         // Include axe-core in tests only

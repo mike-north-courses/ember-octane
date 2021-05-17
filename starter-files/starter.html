@@ -1,6 +1,6 @@
 <!-- Team Selector -->
 <nav
-  class="team-selector bg-indigo-darkest border-indigo-darkest border-r-2 pt-2 text-purple-lighter flex-none hidden sm:block"
+  class="team-selector bg-blue-900 border-blue-900 border-r-2 pt-2 text-purple-lighter flex-none hidden sm:block"
 >
   <a
     href="/li"
@@ -52,7 +52,7 @@
 
 <!-- Team Sidebar -->
 <section
-  class="team-sidebar bg-indigo-darker text-purple-lighter flex-none w-64 sm:w-48 pb-6 hidden sm:flex flex-col"
+  class="team-sidebar bg-blue-800 text-blue-100 flex-none w-64 sm:w-48 pb-6 hidden sm:flex flex-col"
 >
   <header
     class="team-sidebar__header text-white mb-2 mt-3 px-4 flex justify-between"
@@ -67,7 +67,7 @@
       <div class="team-sidebar__current-user-indicator flex items-center mb-6">
         <svg
           aria-hidden="true"
-          class="h-2 w-2 fill-current text-green mr-2"
+          class="h-2 w-2 fill-current text-green-500 mr-2"
           viewBox="0 0 20 20"
         >
           <circle cx="10" cy="10" r="10"></circle>
@@ -117,7 +117,7 @@
     <a
       href="/li/general"
       data-channel-id="general"
-      class="team-sidebar__channel-link py-1 px-4 text-black no-underline block bg-teal-darker"
+      class="team-sidebar__channel-link py-1 px-4 text-black no-underline block bg-green-500"
     >
       <span aria-hidden="true">#</span>
       general
@@ -126,7 +126,7 @@
 
   <footer class="mx-4 mb-2 text-white">
     <button
-      class="text-white rounded bg-grey-darker hover:bg-red-darker p-2 team-sidebar__logout-button"
+      class="text-white rounded bg-gray-600 hover:bg-red-700 w-full p-2 team-sidebar__logout-button"
     >
       Logout
     </button>
@@ -138,19 +138,19 @@
   <!-- Channel Header -->
   <header class="border-b flex px-6 py-2 items-center flex-none channel-header">
     <div>
-      <h3 class="text-grey-darkest mb-1 font-extrabold channel-header__title">
+      <h3 class="text-gray-900 mb-1 font-extrabold channel-header__title">
         <span aria-hidden="true">#</span>
         general
       </h3>
 
-      <h4 class="text-grey-dark text-sm truncate channel-header__description">
+      <h4 class="text-gray-700 text-sm truncate channel-header__description">
         Just some general people generally chatting about general things
       </h4>
     </div>
 
     <form
       role="search"
-      class="ml-auto md:block border border-grey rounded-lg pl-3 pr-2 py-1 flex flex-row-reverse items-center search-form"
+      class="ml-auto md:block border border-gray-500 rounded-lg pl-3 pr-2 py-1 flex flex-row-reverse items-center search-form"
     >
       <label for="search" class="sr-only">Search messages in this chat</label>
 
@@ -168,7 +168,7 @@
       >
         <svg
           aria-hidden="true"
-          class="fill-current text-grey h-4 w-4"
+          class="fill-current text-gray-500 h-4 w-4"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
         >
@@ -184,7 +184,7 @@
   <div class="py-4 flex-1 overflow-y-scroll channel-messages-list" role="list">
     <!-- Message -->
     <div
-      class="flex items-start px-6 py-2 text-sm hover-target hover:bg-grey-lightest message"
+      class="flex items-start px-6 py-2 text-sm hover-target hover:bg-gray-50 message"
       role="listitem"
     >
       <figure class="w-10 h-10 rounded overflow-hidden mr-3">
@@ -204,7 +204,7 @@
             Lisa Huang-North
           </a>
           <span class="sr-only">at</span>
-          <time class="message__timestamp text-grey-darker text-xs font-normal">
+          <time class="message__timestamp text-gray-500 text-xs font-normal">
             Apr 21, 2019 12:21:38 PM
           </time>
         </h5>
@@ -215,7 +215,7 @@
       </div>
 
       <button
-        class="message__delete-button border-transparent hover:border-red-light show-on-hover hover:bg-red-lightest border-1 rounded mb-1 pl-3 pr-2 py-1"
+        class="message__delete-button border-transparent hover:border-red-300 show-on-hover hover:bg-red-100 border-1 rounded mb-1 pl-3 pr-2 py-1"
         aria-label="permanently delete this message"
       >
         🗑
@@ -224,7 +224,7 @@
 
     <!-- Message -->
     <div
-      class="flex items-start px-6 py-2 text-sm hover-target hover:bg-grey-lightest message"
+      class="flex items-start px-6 py-2 text-sm hover-target hover:bg-gray-50 message"
       role="listitem"
     >
       <figure class="w-10 h-10 rounded overflow-hidden mr-3">
@@ -244,7 +244,7 @@
             Mike North
           </a>
           <span class="sr-only">at</span>
-          <time class="message__timestamp text-grey-darker text-xs font-normal">
+          <time class="message__timestamp text-gray-500 text-xs font-normal">
             Apr 21, 2019 12:23:4 PM
           </time>
         </h5>
@@ -256,7 +256,7 @@
       </div>
 
       <button
-        class="message__delete-button border-transparent hover:border-red-light show-on-hover hover:bg-red-lightest border-1 rounded mb-1 pl-3 pr-2 py-1"
+        class="message__delete-button border-transparent hover:border-red-300 show-on-hover hover:bg-red-100 border-1 rounded mb-1 pl-3 pr-2 py-1"
         aria-label="permanently delete this message"
       >
         🗑
@@ -267,7 +267,7 @@
   <!-- Channel Footer -->
   <footer class="pb-6 px-4 flex-none channel-footer">
     <form
-      class="flex w-full rounded-lg border-2 border-grey overflow-hidden"
+      class="flex w-full rounded-lg border-2 border-gray-500 overflow-hidden"
       aria-labelledby="message-label"
     >
       <p id="message-label" class="sr-only">
@@ -275,7 +275,7 @@
       </p>
 
       <button
-        class="text-3xl text-grey border-r-2 border-grey p-2"
+        class="text-3xl text-gray-500 border-r-2 border-gray-500 p-2"
         aria-label="add a file to this message"
       >
         <svg
@@ -303,7 +303,7 @@
 
       <button
         disabled
-        class="channel-footer__message-send-button font-bold uppercase opacity-50 bg-grey-dark text-white border-teal-dark p-2"
+        class="channel-footer__message-send-button font-bold uppercase opacity-50 bg-gray-700 text-white border-green-600 p-2"
       >
         SEND
       </button>

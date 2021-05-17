@@ -3,8 +3,22 @@
 // eslint-disable-next-line node/no-unpublished-require
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-module.exports = function(defaults) {
-  let app = new EmberApp(defaults, {});
+module.exports = function (defaults) {
+  let app = new EmberApp(defaults, {
+    postcssOptions: {
+      compile: {
+        plugins: [
+          {
+            module: require('postcss-import'),
+            options: {
+              path: ['node_modules'],
+            },
+          },
+          require('tailwindcss')('./tailwind.config.js'),
+        ],
+      },
+    },
+  });
 
   // Use `app.import` to add additional libraries to the generated
   // output files.

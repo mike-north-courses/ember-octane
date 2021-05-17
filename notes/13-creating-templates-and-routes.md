@@ -173,7 +173,7 @@ The array iteration is done using handlebar's [`each`](https://api.emberjs.com/e
 
 ```diff
 -   <nav
--     class="team-selector bg-indigo-darkest border-indigo-darkest border-r-2 pt-2 text-purple-lighter flex-none hidden sm:block"
+-     class="team-selector bg-blue-900 border-blue-900 border-r-2 pt-2 text-purple-lighter flex-none hidden sm:block"
 -     aria-label="Team">
 -     <a href="/li" data-team-id="li"
 -       class="team-selector__team-button cursor-pointer rounded-lg p-2 pl-4 block no-underline opacity-25 opacity-100">
@@ -192,7 +192,7 @@ The array iteration is done using handlebar's [`each`](https://api.emberjs.com/e
 -           alt="Microsoft">
 -       </div>
 -     </a>
-+<nav class="team-selector bg-indigo-darkest border-indigo-darkest border-r-2 pt-2 text-purple-lighter flex-none hidden sm:block"
++<nav class="team-selector bg-blue-900 border-blue-900 border-r-2 pt-2 text-purple-lighter flex-none hidden sm:block"
 +  aria-label="Team">
 +  {{#each @teams as |team|}}
 +    <LinkTo @route="teams.team" @model={{team.id}} data-team-id={{team.id}} class="team-selector__team-button cursor-pointer rounded-lg p-2 pl-4 block no-underline opacity-25 opacity-100">
@@ -229,7 +229,7 @@ Iterate the `channels` array that was passed in as part of the @team attribute u
 
 ```diff
 -   <a href="/li/general" data-channel-id="general"
--     class="team-sidebar__channel-link py-1 px-4 text-white no-underline block bg-teal-darker">
+-     class="team-sidebar__channel-link py-1 px-4 text-white no-underline block bg-green-600">
 -     <span aria-hidden="true">#</span>
 -     general
 -   </a>
@@ -237,7 +237,7 @@ Iterate the `channels` array that was passed in as part of the @team attribute u
 +     <LinkTo
 +       @route="teams.team.channel"
 +       @model={{channel.id}}
-+       @activeClass="bg-teal-darker"
++       @activeClass="bg-green-600"
 +       data-channel-id={{channel.id}}
 +       class="team-sidebar__channel-link py-1 px-4 text-white no-underline block">
 +       <span aria-hidden="true">#</span>

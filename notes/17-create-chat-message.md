@@ -126,9 +126,9 @@ We'll need to hook this up with a few changes to our existing hbs file for this 
     >
 
 -   <button disabled
--     class="channel-footer__message-send-button font-bold uppercase opacity-50 bg-grey-dark text-white border-teal-dark p-2">
+-     class="channel-footer__message-send-button font-bold uppercase opacity-50 bg-gray-700 text-white border-green-600 p-2">
 +   <button disabled={{this.isDisabled}}
-+     class="channel-footer__message-send-button font-bold uppercase text-white border-teal-dark p-2 {{if this.isDisabled "bg-grey-dark opacity-50" "bg-teal-dark"}}">
++     class="channel-footer__message-send-button font-bold uppercase text-white border-green-600 p-2 {{if this.isDisabled "bg-gray-700 opacity-50" "bg-green-600"}}">
       SEND
     </button>
   </form>
@@ -139,8 +139,8 @@ Now let's hook up that submit event. Make one more change to [`app/templates/com
 ```diff
 <!-- Channel Footer -->
 <footer class="pb-6 px-4 flex-none channel-footer">
-- <form class="flex w-full rounded-lg border-2 border-grey overflow-hidden" aria-labelledby="message-label">
-+ <form class="flex w-full rounded-lg border-2 border-grey overflow-hidden" aria-labelledby="message-label"
+- <form class="flex w-full rounded-lg border-2 border-gray-500 overflow-hidden" aria-labelledby="message-label">
++ <form class="flex w-full rounded-lg border-2 border-gray-500 overflow-hidden" aria-labelledby="message-label"
 +   {{on "submit" this.onSubmit}} >
     <h1 id="message-label" class="sr-only">
       Message Input
